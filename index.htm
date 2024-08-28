@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>hello there</title>
+  <style>
+    .menu li {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <div class="title">kenken</div>
+    <div class="open-menu">☰</div>
+  </header>
+  <div class="cand">
+    <div class="plus">+</div>
+    <div class="minus">−</div>
+    <div class="numbers"></div>
+  </div>
+  <div class="board"></div>
+  <div class="timer">00:00:00</div>
+  <div class="mark"></div>
+
+  <dialog class="menu">
+    <ul>
+      <li class="new-game-link"><a href="javascript:;">new game</a></li>
+      <li class="check-link"><a href="javascript:;">check</a></li>
+      <li class="pause-link"><a href="javascript:;">pause</a></li>
+      <li class="prefs-link"><a href="javascript:;">preferences</a></li>
+      <li class="stats-link"><a href="javascript:;">statistics</a></li>
+      <li class="export-link"><a href="javascript:;" download="statistics.json">export statistics</a></li>
+      <li class="import-link">
+        <input type="file" style="display: none" accept=".json">
+        <a href="javascript:;">import statistics</a>
+      </li>
+      <li class="about-link"><a href="javascript:;">about</a></li>
+    </ul>
+  </dialog>
+  <dialog class="prefs">
+  </dialog>
+  <dialog class="stats">
+    <h3>statistics</h3>
+    <div>
+      <label for="stats-size">game size:</label>
+      <select id="stats-size">
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+      </select>
+    </div>
+    <div>
+      <label for="stats-hard">hard mode:</label>
+      <input id="stats-size" type="checkbox" />
+    </div>
+    <hr>
+    <dl>
+      <dt>games won</dt>
+      <dd class="games-won">0</dd>
+      <dt>games played</dt>
+      <dd class="games-played">0</dd>
+      <dt>average time</dt>
+      <dd class="average-time">00:00:00</dd>
+      <dt>best time</dt>
+      <dd class="best-time"></dd>
+      <dt>best time date</dt>
+      <dd class="best-time-date"></dd>
+    </dl>
+    <hr>
+    <button class="ok">ok</button>
+    <button class="clear">clear</button>
+  </dialog>
+  <dialog class="about">
+    <h3>about</h3>
+    <div>
+      created by <a href="https://github.com/asottile">asottile</a><br><br>
+      <a href="https://github.com/asottile/kenken">github</a>
+    </div>
+    <button class="ok">ok</button>
+  </dialog>
+
+  <script src="dist/main.js"></script>
+</body>
+</html>
